@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">بنك مصر</string>
+    <string name="change_language_to">EN</string>
+    <string name="need_help">مزيد من المساعده؟\u0020</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="forgot_username_password">نسيت اسم المستخدم/كلمة المرور؟</string>
+    <string name="password">كلمة المرور</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="our_products">منتجاتنا</string>
+    <string name="exchange_rate">سعر الصرف</string>
+    <string name="security_tips">نصائح أمنية</string>
+    <string name="nearest_branch_or_atm">أقرب فرع أو ماكينة صراف آلي</string>
+</resources>
