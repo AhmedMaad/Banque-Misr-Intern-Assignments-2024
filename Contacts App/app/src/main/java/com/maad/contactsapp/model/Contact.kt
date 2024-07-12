@@ -1,7 +1,10 @@
 package com.maad.contactsapp.model
 
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+
 class Contact(
-    val pic: Int,
-    val name: Int,
+    @DrawableRes val pic: Int,
+    @StringRes val name: Int,
     val phoneNumber: String,
 )
