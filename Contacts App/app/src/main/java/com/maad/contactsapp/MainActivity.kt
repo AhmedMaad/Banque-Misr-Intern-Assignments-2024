@@ -1,5 +1,6 @@
 package com.maad.contactsapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -57,7 +58,8 @@ fun AppBar() {
             TopAppBar(
                 title = { Text(text = stringResource(R.string.contacts_app)) },
                 actions = {
-                    IconButton(onClick = {}) {
+                    val context = LocalContext.current
+                    IconButton(onClick = { makeCall(context, "02337788987987") }) {
                         Icon(
                             imageVector = Icons.Filled.Home,
                             contentDescription = stringResource(R.string.call_home)
@@ -88,10 +90,7 @@ fun ContactListItem(contact: Contact, modifier: Modifier = Modifier) {
     Card(
         shape = RectangleShape,
         modifier = modifier
-            .clickable {
-                val i = Intent(Intent.ACTION_DIAL, "tel:${contact.phoneNumber}".toUri())
-                context.startActivity(i)
-            }
+            .clickable { makeCall(context, contact.phoneNumber) }
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Image(
@@ -114,6 +113,11 @@ fun ContactListItem(contact: Contact, modifier: Modifier = Modifier) {
         }
 
     }
+}
+
+fun makeCall(context: Context, phoneNumber: String) {
+    val i = Intent(Intent.ACTION_DIAL, "tel:$phoneNumber".toUri())
+    context.startActivity(i)
 }
 
 @Preview(showBackground = true)
