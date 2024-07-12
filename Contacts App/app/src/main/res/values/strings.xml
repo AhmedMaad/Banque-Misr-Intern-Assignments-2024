@@ -12,5 +12,7 @@
     <string name="sister">Sister</string>
     <string name="son">Son</string>
     <string name="uncle">Uncle</string>
+    <string name="contacts_app">Contacts App</string>
+    <string name="call_home">Call home</string>
 
 </resources>
